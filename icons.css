@@ -1,0 +1,38 @@
+.ne-icon{
+    display:inline-block;
+    position:relative;
+}
+
+.ne-icon::before{
+    content:" ";
+    display:inline-block;
+    text-align:center;
+    font-style:normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.ne-icon {
+    width: var(--size, 16px);
+    height: var(--size, 16px);
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .ne-icon::before {
+        background-size: auto 100%;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .ne-icon::before {
+        background-size: 100% auto;
+    }
+}
+
+.ne-icon-tick::before{
+    background-image: url(./icons/check.png);
+}
