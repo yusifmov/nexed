@@ -36,3 +36,7 @@
 .ne-icon-tick::before{
     background-image: url(./icons/check.png);
 }
+
+.ne-icon-tick::before{
+    background-image: url(./icons/star.png);
+}
