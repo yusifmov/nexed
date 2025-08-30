@@ -45,6 +45,14 @@
     background-image: url(./icons/users.png);
 }
 
+.ne-icon-double-user::before{
+    background-image: url(./icons/double-user.png);
+}
+
 .ne-icon-video::before{
     background-image: url(./icons/video.png);
+}
+
+.ne-icon-right-arrow-double::before{
+    background-image: url(./icons/right-arrow-double.png);
 }
