@@ -44,3 +44,7 @@
 .ne-icon-users::before{
     background-image: url(./icons/users.png);
 }
+
+.ne-icon-video::before{
+    background-image: url(./icons/video.png);
+}
