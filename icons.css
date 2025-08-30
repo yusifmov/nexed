@@ -37,6 +37,10 @@
     background-image: url(./icons/check.png);
 }
 
-.ne-icon-tick::before{
+.ne-icon-star::before{
     background-image: url(./icons/star.png);
+}
+
+.ne-icon-users::before{
+    background-image: url(./icons/users.png);
 }
