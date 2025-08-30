@@ -53,6 +53,26 @@
     background-image: url(./icons/video.png);
 }
 
-.ne-icon-right-arrow-double::before{
-    background-image: url(./icons/right-arrow-double.png);
+.ne-icon-arrow-right-double::before{
+    background-image: url(icons/arrow-right-double.png);
+}
+
+.ne-icon-arrow-right-thick-dark::before{
+    background-image: url(icons/arrow-right-thick-dark.png);
+}
+
+.ne-icon-arrow-right-thick-white::before{
+    background-image: url(icons/arrow-right-thick-white.png);
+}
+
+.ne-icon-arrow-right-thick-white::before{
+    background-image: url(icons/arrow-right-thick-white.png);
+}
+
+.ne-icon-arrow-right-thin-black::before{
+    background-image: url(icons/arrow-right-thin-black.png);
+}
+
+.ne-icon-arrow-right-thin-yellow::before{
+    background-image: url(icons/arrow-right-thin-yellow.png);
 }
