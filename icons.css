@@ -76,3 +76,19 @@
 .ne-icon-arrow-right-thin-yellow::before{
     background-image: url(icons/arrow-right-thin-yellow.png);
 }
+
+.ne-icon-hands::before{
+    background-image: url(icons/hands.png);
+}
+
+.ne-icon-finger::before{
+    background-image: url(icons/finger.png);
+}
+
+.ne-icon-payment::before{
+    background-image: url(icons/payment.png);
+}
+
+.ne-icon-save::before{
+    background-image: url(icons/save.png);
+}
