@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.qeydiyyati {
+    display: flex;
+    flex-direction: column;
+    width: 856px;
+    height: 151px;
+    gap: 48px;
+    top: 894px;
+    left: 292px;
+    align-items: center;
+}
+
+.basliq {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.basliq h2 {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-text {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 64.8px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #191816;
+}
+
+.yellow-text {
+    color: #F7CB15;
+    font-size: 52.52px;
+    horiz-align: center;
+    vertical-align: middle;
+}
+ .basliq p {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0;
+    horiz-align: center;
+    vertical-align: middle;
+    color: #878E88;
+    text-align: center;
+     width: 566px;
+     height: 69px;
+}
+ .softwareEngineering{
+     display: flex;
+     flex-direction: row;
+     gap: 31px;
+     padding: 20px;
+ }
+ .box{
+     display: flex;
+     flex-direction: column;
+     border-radius: 28px;
+     padding: 28px;
+     gap: 16px;
+     border: 1px solid #F0F0F0;
+     justify-content: center;
+     align-items: center;
+ }
+ .box-image{
+     display: flex;
+     flex-direction: column;
+     width: 357px;
+     gap: 16px;
+     padding: 32px;
+     border-radius: 28px;
+     background-image: url("../img/women.png");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+ .icon1{
+     display: flex;
+     flex-direction: row;
+     width: 68px;
+     border-radius: 26px;
+     padding: 10px;
+     gap: 10px;
+     background-color:#F7CB15;
+     font-size: 14px;
+     font-weight: 500;
+     font-family: 'Inter', sans-serif;
+     letter-spacing: 0;
+     color: #FFFFFF;
+ }
+ .icon2{
+     display: flex;
+     flex-direction: column;
+     width: 105px;
+     border-radius: 26px;
+     padding: 10px;
+     gap: 10px;
+     background-color:#FEFAE8;
+     font-family: 'Inter', sans-serif;
+     letter-spacing: 0;
+     font-size: 14px;
+     font-weight: 500;
+     color: #F7CB15;
+ }
+ .box-link{
+     display: flex;
+     flex-direction: row;
+     border-radius: 20px;
+     width: 357px;
+     height: 58px;
+     padding: 10px;
+     gap: 10px;
+     background-color:#F7CB151A;
+     cursor: pointer;
+     justify-content: center;
+     align-items: center;
+ }
+ .box-link a{
+     display: flex;
+     text-decoration: none;
+     font-family: 'Inter', sans-serif;
+     font-size: 20px;
+     font-weight: 600;
+     color: #F7CB15;
+     horiz-align: center;
+     vertical-align: middle;
+     letter-spacing: 0;
+ }
+ .box-btn{
+     display: flex;
+     flex-direction: column;
+     border-radius: 20px;
+     gap: 20px;
+     border: 1px solid #0000000F;
+     padding: 10px;
+ }
+ .box-text{
+     display: flex;
+     border-bottom: 1px solid #0000000F;
+     width: 357px;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+ }
+ .box-text h3{
+     font-family: 'Inter', sans-serif;
+     font-size: 20px;
+     font-weight: 600;
+     letter-spacing: 0;
+     horiz-align: right;
+     color: #F7CB15;
+     text-align: center;
+ }
+
+ .skillset{
+     display: flex;
+     width: 357px;
+     flex-direction: column;
+     padding: 28px;
+
+ }
+ .skill{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+ .skill h2{
+     font-family: 'Inter', sans-serif;
+     font-weight: 600;
+     color: #000000;
+     font-size: 18px;
+     letter-spacing: 0;
+     vertical-align: middle;
+ }
+ .skill p{
+     font-family: 'Inter', sans-serif;
+     font-size: 14px;
+     font-weight: 300;
+     color: #000000;
+     letter-spacing: 0;
+     vertical-align: middle;
+     line-height: 29px;
+ }
+ .buton{
+     display: flex;
+     flex-direction: column;
+     height: 70px;
+     position: relative;
+ }
+ .buton a{
+     width: 374px;
+     display: flex;
+     text-decoration: none;
+     border-radius: 20px;
+     padding:28px;
+     background-color: #F7CB15;
+     font-family: 'Inter', sans-serif;
+     font-size: 16px;
+     font-weight: 600;
+     letter-spacing: 0;
+     color: #FFFFFF;
+     horiz-align: center;
+     vertical-align: middle;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top: 40px;
+     left: -35px;
+ }

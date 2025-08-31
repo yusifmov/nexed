@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .profile-card {
+            width: 350px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .rating-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .rating-box i {
+            color: #ffc107;
+            margin-right: 5px;
+        }
+
+        .rating-box span {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .students-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .category-tag {
+            background-color: #ffe082;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: inline-block;
+            font-weight: 600;
+            color: #4b4b4b;
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 0 25px;
+            text-align: left;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #4b4b4b;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .info-section {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .info-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .info-section p {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+        }
+
+        .info-section .skills-list {
+            line-height: 1.5;
+        }
+
+        .apply-button {
+            width: 80%;
+            padding: 15px;
+            background-color: #ffc107;
+            color: #4b4b4b;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .apply-button:hover {
+            background-color: #ffb300;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-card">
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1587&auto=format&fit=crop" alt="Profile of a person" class="profile-image">
+        <div class="overlay-text">
+            <div class="rating-box">
+                <i class="fas fa-star"></i>
+                <span>4.5</span>
+            </div>
+            <div class="students-box">
+                <span>+200 Tələbə</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-tag">Software Engineering</div>
+
+    <div class="name">Farid Mirzayev</div>
+
+    <div class="content">
+        <div class="info-section">
+            <h3>Your future job title</h3>
+            <p>Software Engineer / Web Developer / Full-Stack Developer</p>
+        </div>
+        <div class="info-section">
+            <h3>Skillset</h3>
+            <p class="skills-list">
+                Full-Stack: JavaScript, React.js, HTML, CSS, Babel, Webpack, NPM, GitHub, Git Rest API
+            </p>
+        </div>
+    </div>
+
+    <button class="apply-button">Müraciət et</button>
+</div>
+
+</body>
+</html>
