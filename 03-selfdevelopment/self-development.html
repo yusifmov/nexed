@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Cards</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="../icons.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset & Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            padding: 1rem;
+        }
+
+        /* Grid Container for Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem auto;
+        }
+
+        /* Card Container */
+        .card-container {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Image Section */
+        .image-section {
+            position: relative;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 148px;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            color: #374151;
+            font-weight: 600;
+            border-radius: 9999px;
+            padding: 0.375rem 0.75rem;
+        }
+
+        .date-badge {
+            top: 1rem;
+            left: 1rem;
+            font-size: 14px;
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        .lang-badge {
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 14px;
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        .bookmark-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            color: #4b5563;
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .bookmark-button:hover {
+            background-color: #ffffff;
+        }
+
+        .bookmark-button i {
+            font-size: 1.125rem;
+        }
+
+        /* Main Content Section */
+        .content-section {
+            padding: 1.5rem;
+            flex-grow: 1; /* Allows this section to grow */
+        }
+
+        .content-section h1 {
+            font-size: 22.5px;
+            font-weight: 500;
+            color: #222426;
+            line-height: 32px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .content-section p {
+            color: #7C8799;
+            font-weight: 400;
+            font-size: 14.5px;
+            line-height: 24px;
+            margin-top: 0.75rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Info & Actions Sections */
+        .section-divider {
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 41px;
+            padding: 1.5rem 44px;
+
+            & > div{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                position: relative;
+            }
+
+            & > div:not(:last-child)::after {
+                display: block;
+                position: absolute;
+                right: -20px;
+                content: ' ';
+                height: 100%;
+                width: 1px;
+                background-color: #f3f4f6;
+            }
+        }
+
+        .info-grid .label {
+            color: #F7CB15;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            line-height: 24px;
+        }
+
+        .info-grid .value {
+            color: #13171A;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            line-height: 24px;
+        }
+
+        .actions-section {
+            padding: 1.5rem;
+        }
+
+        .actions-section button {
+            width: 100%;
+            padding: 0.75rem 0;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions-section > div > button:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+
+        .btn-primary {
+            background-color: #facc15;
+            color: #111827;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        .btn-primary:hover {
+            background-color: #f59e0b;
+        }
+        .manat {
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            background-color: #f3f4f6;
+            color: #374151;
+            font-weight: 600;
+        }
+        .btn-secondary:hover {
+            background-color: #e5e7eb;
+        }
+
+        /* Instructor Section */
+        .instructor-section {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .instructor-avatar {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 9999px;
+            object-fit: cover;
+        }
+
+        .instructor-info {
+            margin-left: 1rem;
+            flex-grow: 1;
+        }
+
+        .instructor-info .name {
+            font-weight: 700;
+            color: #111827;
+            font-size: 0.875rem;
+        }
+
+        .instructor-info .title {
+            color: #6b7280;
+            font-size: 0.75rem;
+        }
+
+        .rating-badge {
+            display: flex;
+            align-items: center;
+            background-color: #facc15;
+            color: #111827;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .rating-badge i {
+            font-size: 0.75rem;
+            margin-right: 0.375rem;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                margin: 1rem auto;
+            }
+            body {
+                padding: 0.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="cards-grid">
+    <!-- Card 1 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card-container">
+        <div class="image-section">
+            <img class="card-image" src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A woman smiling in a classroom setting">
+            <div class="badge date-badge">29 Jan, 2025</div>
+            <button class="bookmark-button"><i class="ne-icon ne-icon-save"></i></button>
+            <div class="badge lang-badge">Azərbaycan dili</div>
+        </div>
+        <div class="content-section">
+            <h1>Azərbaycan dili – biliklərini inkişaf etdir, universitet arzusuna yaxınla</h1>
+            <p>Azərbaycan dili hazırlığı kurslarımız abituriyentlərə qrammatikanı dərindən öyrənmək, mətn üzərində işləmək, test tapşırıqlarını effektiv həll etmək və qəbul imtahanlarında yüksək nəticə əldə etmək üçün peşəkar dəstək təqdim edir.</p>
+        </div>
+        <div class="section-divider info-grid">
+            <div><p class="label">Dərs günləri</p><p class="value">Həftəiçi</p></div>
+            <div><p class="label">Dərs saatları</p><p class="value">19:00-21:45</p></div>
+            <div><p class="label">Təcrübə</p><p class="value">10 il</p></div>
+        </div>
+        <div class="section-divider actions-section">
+            <div>
+                <button class="btn-primary"><span class="manat">₼</span>255</button>
+                <button class="btn-secondary">Müraciət et</button>
+            </div>
+        </div>
+        <div class="section-divider instructor-section">
+            <img class="instructor-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instructor">
+            <div class="instructor-info"><p class="name">Farid Mirzayev</p><p class="title">Photoshop & Creative...</p></div>
+            <div class="rating-badge"><i class="ne-icon ne-icon-star-white"></i>4.5</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
