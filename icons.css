@@ -41,6 +41,10 @@
     background-image: url(./icons/star.png);
 }
 
+.ne-icon-star-white::before{
+    background-image: url(./icons/star-white.png);
+}
+
 .ne-icon-users::before{
     background-image: url(./icons/users.png);
 }
