@@ -81,6 +81,10 @@
     background-image: url(icons/arrow-right-thin-yellow.png);
 }
 
+.ne-icon-arrow-right-thin-white::before{
+    background-image: url(icons/arrow-right-thin-white.png);
+}
+
 .ne-icon-hands::before{
     background-image: url(icons/hands.png);
 }
