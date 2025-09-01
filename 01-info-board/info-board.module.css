@@ -1,77 +1,80 @@
-.infoBoard{
-    background-image: url(../img/man-using-pc.jpg);
+.infoBoard {
     border-radius: 19px 25px 25px 19px;
+    padding: 25px;
     overflow: hidden;
     position: relative;
+    height: 560px;
 }
 
-.infoBoardForStudents{
-    position: absolute;
-    top: 0;
-    left: -1px;
+.infoBoardForStudents {
     height: 100%;
     min-width: 70%;
     background-image: url(../img/curved-border.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
-    z-index: 2;
 }
 
-.infoBoardMain{
+.infoBoardMain {
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    & > img{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+    background-image: url(../img/man-using-pc.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 19px 25px 25px 19px;
+    overflow: hidden;
 }
 
-.infoBoardDetails{
-    /*position: absolute;*/
-    /*z-index: 1;*/
-    /*top: 0;*/
-    /*left: 0;*/
+.infoBoardMain > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.infoBoardDetails {
+    height: 100%;
     background-image: url(../img/info-board-frame.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top 0 right 0;
 }
 
-.infoBoard{
-    ul, li{
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    ul {
-        flex-direction: column;
-        gap: 16px;
-    }
-    li{
-        gap: 8px;
-    }
-
-    h2{
-        font-size: 36px;
-        margin: 0;
-        font-weight: 800;
-        font-family: 'Inter', sans-serif;
-        text-transform: uppercase;
-    }
-
-    p{
-        font-size: 14px;
-        line-height: 27px;
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-    }
+.infoBoard ul,
+.infoBoard li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+.infoBoard ul {
+    flex-direction: column;
+    gap: 16px;
+}
 
-.infoBoardDetailsContent{
+.infoBoard li {
+    gap: 8px;
+    align-items: center;
+}
+
+.infoBoard h2 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+.infoBoard p {
+    font-size: 14px;
+    line-height: 27px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.infoBoardDetailsContent {
+    height: 100%;
     width: 50%;
     position: relative;
     padding-bottom: 85px;
@@ -80,36 +83,109 @@
     align-items: flex-start;
     gap: 16px;
     z-index: 5;
+    box-sizing: border-box;
 }
 
-.infoBoardMain .infoBoardDetailsContent{
+.infoBoardMain .infoBoardDetailsContent {
     padding-top: 109px;
     left: 50%;
     color: white;
 }
 
-.infoBoardForStudents{
-    background-image: url(../img/curved-border.png);
+.infoBoardForStudents .infoBoardDetailsContent {
+    padding-top: 68px;
+    padding-left: 57px;
+    width: 40%;
+}
 
-    .infoBoardDetailsContent{
-        padding-top: 68px;
-        padding-left: 57px;
-        width: 40%;
+.infoBoardMainButton,
+.infoBoardMainButton:hover,
+.infoBoardMainButton:focus,
+.infoBoardMainButton:active,
+.infoBoardMainButton:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 11.5px 59px;
+    background-color: #F7CB15;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+.infoBoardForStudents .infoBoardMainButton{
+    color: black;
+}
+
+.infoBoardForStudentsContainer{
+    position: absolute;
+    height: calc(100% - 50px);
+}
+
+
+/* --- Responsive Styles (for tablets and phones) --- */
+@media (min-width: 992px) and (max-width: 1188px) {
+    .infoBoardForStudents {
+        background-size: 55% 100%;
     }
 }
 
-.infoBoardMainButton{
-    &, &:hover, &:focus, &:active, &:visited{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        padding: 11.5px 59px;
-        background-color: #F7CB15;
-        border-radius: 8px;
+@media (max-width: 992px) {
+    .infoBoard{
+        height: unset;
+    }
+
+    .infoBoardForStudentsContainer{
+        position: relative;
+    }
+
+    .infoBoardForStudents {
+        position: relative;
+        left: 0;
+        min-width: 100%;
+        height: auto;
+        /*background-image: none;*/
+        background-color: white;
+    }
+
+    .infoBoardDetails {
+        background-size: auto 95%;
+        background-position: bottom;
+    }
+
+    .infoBoardDetailsContent {
+        max-width: 500px;
+    }
+
+    .infoBoardForStudents .infoBoardDetailsContent {
+        left: 0;
+        width: auto;
+        color: black;
+        padding-top: unset;
+        padding-left: unset;
+    }
+
+    .infoBoardForStudents{
+        padding: 40px 25px;
+        box-sizing: border-box;
+    }
+
+    .infoBoardMain .infoBoardDetailsContent {
+        padding: 40px 25px;
+        left: 0;
+        width: auto;
+        color: black;
+    }
+
+    .infoBoardMain .infoBoardDetailsContent {
         color: white;
-        font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        text-decoration: none;
+    }
+
+    .infoBoard ul {
+        align-items: flex-start;
+        text-align: left;
     }
 }

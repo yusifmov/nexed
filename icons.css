@@ -81,6 +81,10 @@
     background-image: url(icons/arrow-right-thin-yellow.png);
 }
 
+.ne-icon-arrow-right-thin-white::before{
+    background-image: url(icons/arrow-right-thin-white.png);
+}
+
 .ne-icon-hands::before{
     background-image: url(icons/hands.png);
 }
@@ -95,4 +99,24 @@
 
 .ne-icon-save::before{
     background-image: url(icons/save.png);
+}
+
+.ne-icon-facebook-lite::before{
+    background-image: url(icons/facebook-lite.png);
+}
+
+.ne-icon-twitter-lite::before{
+    background-image: url(icons/twitter-lite.png);
+}
+
+.ne-icon-instagram-lite::before{
+    background-image: url(icons/instagram-lite.png);
+}
+
+.ne-icon-linkedin-lite::before{
+    background-image: url(icons/linkedin-lite.png);
+}
+
+.ne-icon-youtube-lite::before{
+    background-image: url(icons/youtube-lite.png);
 }
