@@ -15,7 +15,7 @@
             padding: 40px;
             margin-left: auto;
             font-family: Inter, sans-serif;
-            gap: 120px;
+            gap: clamp(40px, 8vw, 120px);
             box-sizing: border-box;
         }
 
@@ -105,10 +105,18 @@
         .form-box {
             flex: 0.75;
             background: #fff;
-            padding: 40px 108px 108px;
+            padding: 40px 0 108px;
             border-radius: 29px;
             border: 1px solid #F0F0F0;
             gap: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-box form{
+            width: 440px;
+            min-width: 300px;
         }
 
         .form-box h2 {
@@ -202,11 +210,17 @@
             }
 
             .form-box {
-                padding: 30px 80px;
+                /*padding: 30px 80px;*/
             }
 
             .card h2 {
                 font-size: 40px;
+            }
+        }
+
+        @media (max-width: 992px){
+            .card:nth-child(2){
+                transform: none;
             }
         }
 
@@ -222,11 +236,21 @@
 
             .form-box {
                 flex: 1;
-                padding: 25px 50px;
+                /*padding: 25px 50px;*/
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 920px){
+            .card{
+                width: 100% !important;
+            }
+
+            .left, .form-box{
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 859px) {
             .container {
                 flex-direction: column;
                 align-items: center;
@@ -248,7 +272,11 @@
             .form-box {
                 width: 100%;
                 max-width: 500px;
-                padding: 20px;
+            }
+
+            .form-box form{
+                min-width: unset;
+                width: 100%;
             }
 
             .form-box h2 {
