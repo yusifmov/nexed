@@ -105,7 +105,7 @@
         .form-box {
             flex: 0.75;
             background: #fff;
-            padding: 40px 108px;
+            padding: 40px 108px 108px;
             border-radius: 29px;
             border: 1px solid #F0F0F0;
             gap: 32px;
@@ -143,6 +143,7 @@
             border-radius: 8px;
             font-size: 14px;
             outline: none;
+            box-sizing: border-box;
         }
 
         .form-group textarea::placeholder{
@@ -193,18 +194,35 @@
         }
 
         /* --- Responsive --- */
-        @media (max-width: 1024px) {
+        /* --- Responsive Improvements --- */
+        @media (max-width: 1200px) {
             .container {
-                gap: 60px;
+                gap: 80px;
                 padding: 30px;
             }
 
             .form-box {
-                padding: 30px 60px;
+                padding: 30px 80px;
             }
 
             .card h2 {
-                font-size: 36px;
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                gap: 50px;
+                padding: 25px;
+            }
+
+            .left {
+                flex: 0.9;
+            }
+
+            .form-box {
+                flex: 1;
+                padding: 25px 50px;
             }
         }
 
@@ -218,12 +236,13 @@
 
             .left {
                 align-items: center;
+                width: 100%;
             }
 
             .card {
-                transform: none !important; /* remove the shift on smaller screens */
+                transform: none !important; /* reset shifted cards */
                 width: 100% !important;
-                max-width: 350px;
+                max-width: 360px;
             }
 
             .form-box {
@@ -233,27 +252,35 @@
             }
 
             .form-box h2 {
-                font-size: 24px;
+                font-size: 22px;
             }
 
             .form-box p {
-                margin-bottom: 30px;
+                margin-bottom: 25px;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
+            .container {
+                padding: 15px;
+            }
+
             .card h2 {
-                font-size: 28px;
+                font-size: 26px;
             }
 
             .avatars img {
-                width: 48px;
-                height: 48px;
+                width: 50px;
+                height: 50px;
             }
 
             .studentAvatars img {
-                width: 72px;
-                height: 58px;
+                width: 70px;
+                height: 56px;
+            }
+
+            .form-group label {
+                font-size: 13px;
             }
 
             .form-group input,
@@ -263,8 +290,22 @@
             }
 
             .btn {
-                padding: 18px;
+                padding: 16px;
                 font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .form-box {
+                padding: 15px;
+            }
+
+            .form-box h2 {
+                font-size: 20px;
+            }
+
+            .form-box p {
+                font-size: 13px;
             }
         }
 
