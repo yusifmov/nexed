@@ -8,8 +8,6 @@
     display: flex;
     flex-direction: row;
     padding: 20px;
-    width: 1313.7px;
-    height: 291.53px;
     gap: 24px;
 
 }
@@ -34,8 +32,6 @@
 }
 
 .becomeandinstructor-title h2 {
-    width: 565.72px;
-    height: 40px;
     font-family: 'Inter', sans-serif;
     font-size: 31.87px;
     font-weight: 600;
@@ -45,26 +41,21 @@
 }
 
 .becomeandinstructor-title p {
-    width: 309.75px;
-    height: 88px;
     font-family: 'Inter', sans-serif;
     font-size: 13.94px;
     font-weight: 400;
     line-height: 21.91px;
-    letter-spacing: -0.13px;
     color: #FFFFFF;
 }
 
 .becomeandinstructor-title a {
     display: flex;
     flex-direction: row;
-    width: 259.66px;
-    height: 48px;
     gap: 11.95px;
     border-radius: 30px;
     background-color: #FFFFFF;
-    padding-right: 23.9px;
-    padding-left: 23.9px;
+    padding-right: 39.84px;
+    padding-left: 39.84px;
     border: none;
     justify-content: center;
     align-items: center;
@@ -72,7 +63,6 @@
     font-size: 15.94px;
     font-weight: 600;
     line-height: 47.81px;
-    letter-spacing: -0.128px;
     color: #000000;
     text-transform: capitalize;
     cursor: pointer;
@@ -87,34 +77,27 @@
 }
 
 .steps-to-Learn-and-Earn-title h2 {
-    width: 477px;
-    height: 40px;
     font-family: 'Inter', sans-serif;
     font-size: 31.87px;
     font-weight: 600;
     line-height: 39.84px;
-    letter-spacing: -0.32px;
     color: #000000;
 }
 
 .steps-to-Learn-and-Earn-count {
     display: flex;
     flex-direction: column;
-    width: 564.62px;
-    height: 123.66px;
     gap: 19.92px;
 }
 
 .part1 {
     display: flex;
     flex-direction: column;
-    width: 564.62px;
-    height: 51.91px;
+
     gap: 19.92px;
 }
 .part2 {
-    width: 563.53px;
-    height:51.82px;
+
     display: flex;
     flex-direction: row;
     gap: 19.92px;
