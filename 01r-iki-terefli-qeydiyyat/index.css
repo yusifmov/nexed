@@ -1,8 +1,9 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
 }
 
 .container {
@@ -11,10 +12,9 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
-
 }
 
-.qeydiyyati {
+.registrationSection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,13 +23,13 @@
     left: 292px;
 }
 
-.basliq {
+.sectionHeader {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.basliq h2 {
+.sectionHeader h2 {
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: row;
@@ -38,42 +38,38 @@
     justify-content: center;
 }
 
-.black-text {
+.textBlack {
     font-size: 54px;
     font-weight: 700;
     line-height: 64.8px;
-    letter-spacing: 0;
-    vertical-align: middle;
     color: #191816;
-}
-
-.yellow-text {
-    color: #F7CB15;
-    font-size: 52.52px;
-    horiz-align: center;
     vertical-align: middle;
 }
 
-.qeydiyyati p {
-    display: block;
+.textYellow {
+    font-size: 52.52px;
+    color: #F7CB15;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.registrationSection p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 35px;
-    letter-spacing: 0;
-    horiz-align: center;
-    vertical-align: middle;
     color: #878E88;
     text-align: center;
+    vertical-align: middle;
 }
 
-.tm-qeydiyyatlar {
+.registrationsWrapper {
     display: flex;
     flex-direction: row;
     gap: 11px;
 }
 
-.muellim ,.telebe{
+.teacherCard, .studentCard {
     display: flex;
     flex-direction: row;
     flex: 1 1 0;
@@ -83,7 +79,7 @@
     padding: 20px;
 }
 
-.one {
+.cardContent {
     display: flex;
     flex-direction: column;
     width: 285px;
@@ -92,36 +88,32 @@
     border-radius: 19px;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
 
-.one h2 {
+.cardContent h2 {
     font-family: 'Inter', sans-serif;
     font-size: 28px;
     font-weight: 700;
     line-height: 64.8px;
-    letter-spacing: 0;
-    vertical-align: middle;
     color: #000000;
 }
 
-.one p {
+.cardContent p {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 29px;
-    letter-spacing: 0.3px;
-    vertical-align: middle;
     color: #000000;
+    letter-spacing: 0.3px;
 }
 
-.reyting {
+.ratingWrapper {
     display: flex;
     flex-direction: row;
     gap: 4px;
 }
 
-.ulduz {
+.starBox {
     display: flex;
     flex-direction: row;
     width: 59px;
@@ -132,33 +124,29 @@
     align-items: center;
 }
 
-.ulduzunici {
+.starInner {
     display: flex;
     flex-direction: row;
     gap: 4px;
     padding: 10px;
 }
 
-.ulduz img {
+.starBox img {
     width: 16.77px;
     height: 16px;
-    left: -0.88px;
-    color: #F7CB15;
 }
 
-.ulduz p {
+.starBox p {
     width: 16px;
     height: 12px;
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0;
     color: #000000;
     margin-top: 5px;
 }
 
-.istifadeci {
+.userBox {
     display: flex;
     flex-direction: column;
     width: 114px;
@@ -169,32 +157,28 @@
     gap: 10px;
 }
 
-.istifadeciici {
+.userInner {
     display: flex;
     flex-direction: row;
     gap: 4px;
     text-align: center;
     margin-top: -3px;
-
 }
 
-.istifadeciici img {
+.userInner img {
     width: 16px;
     height: 16px;
-    left: -0.88px;
 }
 
-.istifadeciici p {
+.userInner p {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0;
     color: #000000;
     margin-top: 5px;
 }
 
-.ders {
+.lessonBox {
     display: flex;
     flex-direction: column;
     width: 94px;
@@ -205,7 +189,7 @@
     gap: 10px;
 }
 
-.dersici {
+.lessonInner {
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -213,48 +197,38 @@
     margin-top: -3px;
 }
 
-.dersici img {
+.lessonInner img {
     width: 16px;
     height: 16px;
-    left: -0.88px;
 }
 
-.dersici p {
+.lessonInner p {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0;
     color: #000000;
     margin-top: 5px;
     text-align: center;
 }
 
-.duyme {
+.ctaButton {
     display: flex;
     flex-direction: column;
-
     gap: 20px;
     border-radius: 13px;
-    padding-top: 19.5px;
-    padding-bottom: 19.5px;
-    padding-left: 47.5px;
-    padding-right: 47.5px;
+    padding: 19.5px 47.5px;
     background-color: #F7CB15;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: 0;
-    text-align: center;
     color: #FFFFFF;
-    horiz-align: center;
-    vertical-align: middle;
     border: none;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.two {
+.cardFeatures {
     display: flex;
     flex-direction: column;
     border: 1px solid #F0F0F0;
@@ -262,79 +236,78 @@
     gap: 20px;
     padding: 20px;
 }
-.two ul{
+
+.cardFeatures ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.two ul li{
+
+.cardFeatures ul li {
     display: flex;
     flex-direction: row;
     list-style: none;
-    font-family: "Segoe UI Symbol",sans-serif;
+    font-family: "Segoe UI Symbol", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0;
     color: #000000;
-    vertical-align: middle;
     gap: 8px;
+    vertical-align: middle;
 }
-.two ul li img{
+
+.cardFeatures ul li img {
     width: 18.38px;
     height: 18.38px;
-    top: 1.32px;
-    left: 1.31px;
-    color: #F7CB15;
 }
-/* ========== RESPONSIVE ========== */
+
 @media (max-width: 1200px) {
-    .basliq h2 {
+    .sectionHeader h2 {
         font-size: 42px;
     }
-    .yellow-text {
+    .textYellow {
         font-size: 40px;
     }
 }
 
 @media (max-width: 992px) {
-    .tm-qeydiyyatlar {
+    .registrationsWrapper {
         flex-direction: row;
         gap: 30px;
     }
 
-    .muellim, .telebe {
+    .teacherCard, .studentCard {
         flex-direction: column;
         align-items: center;
     }
 
-    .one {
+    .cardContent {
         width: 100%;
         height: auto;
     }
 
-    .two {
+    .cardFeatures {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .basliq h2 {
+    .sectionHeader h2 {
         font-size: 32px;
     }
-    .yellow-text {
+    .textYellow {
         font-size: 30px;
     }
-    .qeydiyyati p {
+    .registrationSection p {
         font-size: 14px;
         line-height: 24px;
     }
-    .duyme {
+    .ctaButton {
         width: 100%;
         padding: 15px;
         font-size: 18px;
     }
-    .tm-qeydiyyatlar{
-        flex-direction:column;
+    .registrationsWrapper {
+        flex-direction: column;
         align-items: center;
     }
 }
@@ -344,32 +317,27 @@
         padding: 15px;
         gap: 40px;
     }
-    .basliq h2 {
+    .sectionHeader h2 {
         flex-direction: column;
         text-align: center;
         gap: 4px;
     }
-    .yellow-text, .black-text {
+    .textYellow, .textBlack {
         font-size: 26px;
     }
-    .reyting {
+    .ratingWrapper {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .ulduz, .istifadeci, .ders {
+    .starBox, .userBox, .lessonBox {
         flex: none;
         margin: 5px 0;
     }
-    .two ul {
+    .cardFeatures ul {
         gap: 12px;
     }
-    .two ul li {
+    .cardFeatures ul li {
         font-size: 13px;
     }
 }
-
-
-
-
-
 
