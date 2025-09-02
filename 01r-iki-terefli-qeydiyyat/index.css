@@ -286,6 +286,87 @@
     left: 1.31px;
     color: #F7CB15;
 }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .basliq h2 {
+        font-size: 42px;
+    }
+    .yellow-text {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .tm-qeydiyyatlar {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .muellim, .telebe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .one {
+        width: 100%;
+        height: auto;
+    }
+
+    .two {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .basliq h2 {
+        font-size: 32px;
+    }
+    .yellow-text {
+        font-size: 30px;
+    }
+    .qeydiyyati p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .duyme {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .tm-qeydiyyatlar{
+        flex-direction:column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+        gap: 40px;
+    }
+    .basliq h2 {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+    .yellow-text, .black-text {
+        font-size: 26px;
+    }
+    .reyting {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ulduz, .istifadeci, .ders {
+        flex: none;
+        margin: 5px 0;
+    }
+    .two ul {
+        gap: 12px;
+    }
+    .two ul li {
+        font-size: 13px;
+    }
+}
 
 
 
