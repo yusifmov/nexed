@@ -154,14 +154,15 @@
         flex-direction: column;
         padding: 10px;
         gap: 20px;
+
     }
 
     .becomeandinstructor {
         width: 100%;
         height: auto;
         padding: 20px;
-        background-size: cover;
-        background-position: center;
+        background-size: 60%;       /* şəkil çox böyük çıxmasın deyə % ilə ölç */
+        background-position: center top;
     }
 
     .becomeandinstructor-title h2 {
@@ -213,7 +214,6 @@
     }
 }
 
-/* Daha kiçik ekranlar üçün (mobil telefonlar) */
 @media (max-width: 600px) {
     .becomeandinstructor-title h2,
     .steps-to-Learn-and-Earn-title h2 {
@@ -237,5 +237,9 @@
         width: 40px;
         height: 40px;
         font-size: 18px;
+    }
+    .becomeandinstructor{
+        background-size: 80%;
+        background-position: center top;
     }
 }
