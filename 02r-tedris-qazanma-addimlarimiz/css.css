@@ -109,18 +109,17 @@
     gap: 15.94px;
 }
 
-.part span{
-    display: flex;
+.part span {
+    min-width: 40px;
+    min-height: 40px;
     width: 51.79px;
     height: 51.79px;
     border-radius: 50%;
-    font-family: 'Inter', sans-serif;
-    font-size: 23.9px;
-    font-weight: 600;
-    horiz-align: center;
+    display: flex;
     align-items: center;
     justify-content: center;
-
+    font-size: 23.9px;
+    font-weight: 600;
 }
 .bir{
     background-color: #2F7FFF3D;
