@@ -1,315 +1,192 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 60px;
-
+    padding: 20px;
 }
 
-.qeydiyyati {
-    display: flex;
-    flex-direction: column;
-    width: 856px;
-    height: 151px;
-    gap: 48px;
-    top: 894px;
-    left: 292px;
-    align-items: center;
-}
-
-.basliq {
+.sectionHeader {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    text-align: center;
 }
 
-.basliq h2 {
+.sectionHeader h2 {
     font-family: 'Inter', sans-serif;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
-    align-items: center;
     justify-content: center;
 }
 
-.black-text {
+.blackText {
     font-size: 54px;
     font-weight: 700;
-    line-height: 64.8px;
-    letter-spacing: 0;
-    vertical-align: middle;
     color: #191816;
 }
 
-.yellow-text {
+.yellowText {
+    font-size: 52px;
     color: #F7CB15;
-    font-size: 52.52px;
-    horiz-align: center;
-    vertical-align: middle;
 }
-.basliq p {
-    display: block;
+
+.sectionHeader p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 35px;
-    letter-spacing: 0;
-    horiz-align: center;
-    vertical-align: middle;
+    line-height: 28px;
     color: #878E88;
-    text-align: center;
-    width: 566px;
-    height: 69px;
+    max-width: 600px;
+    margin: 0 auto;
 }
-.softwareEngineering{
+
+.mentorGrid {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 31px;
-    padding: 20px;
+    justify-content: center;
 }
-.box{
+
+.mentorCard {
     display: flex;
     flex-direction: column;
     border-radius: 28px;
     padding: 28px;
     gap: 16px;
     border: 1px solid #F0F0F0;
-    justify-content: center;
-    align-items: center;
+    max-width: 360px;
 }
-.box-image{
-    display: flex;
-    flex-direction: column;
-    width: 357px;
+
+.mentorImage {
+    width: 100%;
     height: 195px;
     padding: 10px;
-    gap: 16px;
     border-radius: 28px;
     background-image: url("../img/women.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-.icon1{
-    display: flex;
-    flex-direction: row;
-    width: 68px;
-    border-radius: 26px;
-    padding: 10px;
-    gap: 10px;
-    background-color:#F7CB15;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: 0;
-    color: #FFFFFF;
-}
-.icon2{
     display: flex;
     flex-direction: column;
-    width: 105px;
-    border-radius: 26px;
-    padding: 10px;
     gap: 10px;
-    background-color:#FEFAE8;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: #F7CB15;
-}
-.box-link{
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-    width: 357px;
-    height: 58px;
-    padding: 10px;
-    gap: 10px;
-    background-color:#F7CB151A;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-}
-.box-link .a{
-    display: flex;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #F7CB15;
-    horiz-align: center;
-    vertical-align: middle;
-    letter-spacing: 0;
-}
-.box-btn{
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    gap: 20px;
-    border: 1px solid #0000000F;
-}
-.box-text{
-    display: flex;
-    border-bottom: 1px solid #0000000F;
-    width: 357px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-}
-.box-text h3{
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0;
-    color: #F7CB15;
-    text-align: center;
 }
 
-.skillset{
-    display: flex;
-    width: 357px;
-    flex-direction: column;
-    padding: 28px;
-
-}
-.skill{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.skill h2{
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: #000000;
-    font-size: 18px;
-    letter-spacing: 0;
-    vertical-align: middle;
-}
-.skill p{
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: #000000;
-    letter-spacing: 0;
-    vertical-align: middle;
-    line-height: 29px;
-}
-.buton{
-    display: flex;
-    flex-direction: column;
-    height: 70px;
-    position: relative;
-}
-.buton a{
-    width: 360px;
-    display: flex;
-    text-decoration: none;
-    border-radius: 20px;
-    padding:28px;
+.ratingBadge {
     background-color: #F7CB15;
-    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 26px;
+    padding: 8px 12px;
+    width: fit-content;
+}
+
+.studentBadge {
+    background-color: #FEFAE8;
+    color: #F7CB15;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 26px;
+    padding: 8px 12px;
+    width: fit-content;
+}
+
+.categoryTag {
+    background-color: #F7CB151A;
+    border-radius: 20px;
+    padding: 14px;
+    text-align: center;
+    color: #F7CB15;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.mentorInfo {
+    border: 1px solid #0000000F;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mentorName {
+    border-bottom: 1px solid #0000000F;
+    text-align: center;
+    padding: 10px;
+}
+
+.mentorName h3 {
+    color: #F7CB15;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mentorDetails {
+    padding: 20px;
+}
+
+.mentorSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mentorSkills h2 {
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    horiz-align: center;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 40px;
-    left: -30px;
-}
-/* ----------------- RESPONSIVLİK ----------------- */
-
-/* Laptop / kiçik ekranlar üçün */
-@media (max-width: 1200px) {
-    .softwareEngineering {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .box, .box-image, .box-link, .box-btn, .skillset {
-        width: 45%; /* 2 qutu yan-yana */
-    }
+    color: #000;
 }
 
-/* Planşetlər üçün */
+.mentorSkills p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333;
+}
+
+.applyButton a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    background-color: #F7CB15;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* RESPONSIVENESS */
+
+/* Laptop / Tablet */
+@media (max-width: 992px) {
+    .blackText { font-size: 40px; }
+    .yellowText { font-size: 38px; }
+    .sectionHeader p { font-size: 14px; }
+    .mentorCard { max-width: 45%; }
+}
+
+/* Tablet portrait */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-    .softwareEngineering {
-        flex-direction: column;
-        align-items: center;
-    }
-    .box, .box-image, .box-link, .box-btn, .skillset {
-        width: 100%; /* hər qutu alt-alta */
-    }
-    .basliq h2 {
-        font-size: 32px;
-    }
-    .black-text, .yellow-text {
-        font-size: 28px;
-    }
-    .basliq p {
-        width: 100%;
-        font-size: 14px;
-        line-height: 22px;
-    }
-    .box-text h3 {
-        font-size: 18px;
-    }
-    .skill h2 {
-        font-size: 16px;
-    }
-    .skill p {
-        font-size: 12px;
-        line-height: 22px;
-    }
-    .buton a {
-        width: 100%;
-        padding: 18px;
-        font-size: 14px;
-        top: 30px;
-        left: 0;
-    }
+    .mentorCard { max-width: 100%; }
+    .blackText, .yellowText { font-size: 28px; }
+    .mentorName h3 { font-size: 18px; }
+    .mentorSkills p { font-size: 13px; }
 }
 
-/* Mobil telefonlar üçün */
+/* Mobile */
 @media (max-width: 480px) {
-    .basliq h2 {
-        font-size: 24px;
-        flex-direction: column;
-    }
-    .black-text, .yellow-text {
-        font-size: 22px;
-    }
-    .basliq p {
-        font-size: 12px;
-        line-height: 20px;
-    }
-    .box-text h3 {
-        font-size: 16px;
-    }
-    .skill h2 {
-        font-size: 14px;
-    }
-    .skill p {
-        font-size: 12px;
-        line-height: 18px;
-    }
-    .buton a {
-        font-size: 12px;
-        padding: 14px;
-        top: 20px;
-    }
+    .blackText, .yellowText { font-size: 22px; }
+    .sectionHeader p { font-size: 12px; line-height: 20px; }
+    .mentorName h3 { font-size: 16px; }
+    .applyButton a { font-size: 12px; padding: 10px; }
 }
