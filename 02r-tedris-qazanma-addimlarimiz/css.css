@@ -16,8 +16,9 @@
     display: flex;
     gap: 23.9px;
     padding: 39.84px;
-    width: 645.4px;
-    height: 291.53px;
+    max-width: 645.4px;
+    width: 100%;
+    height: auto;
     background-color: #F7CB15;
     background-image: url("/img/men.png");
     background-size: contain;
@@ -148,3 +149,94 @@
 
 
 
+/* Mobil və kiçik ekranlar üçün */
+@media (max-width: 1024px) {
+    .becomeandinstructor-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .becomeandinstructor {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .becomeandinstructor-title h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .becomeandinstructor-title p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .becomeandinstructor-title a {
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .steps-to-Learn-and-Earn {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .steps-to-Learn-and-Earn-title h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .steps-to-Learn-and-Earn-count {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .part2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .part p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .part span {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* Daha kiçik ekranlar üçün (mobil telefonlar) */
+@media (max-width: 600px) {
+    .becomeandinstructor-title h2,
+    .steps-to-Learn-and-Earn-title h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .becomeandinstructor-title p,
+    .part p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .becomeandinstructor-title a {
+        padding: 8px 15px;
+        font-size: 13px;
+        line-height: 36px;
+    }
+
+    .part span {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
